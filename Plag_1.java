@@ -6,9 +6,13 @@ public class Plag_1 {
 	public static void main(String[] args) {
 		
 		Openfiles f=new Openfiles();
+		
 		ArrayList<Float> bag_plag=new ArrayList<>();
 		ArrayList<Float> lcs_plag=new ArrayList<>();
 		ArrayList<Float> fp_plag=new ArrayList<>();
+		
+		//this loop iterates over files and finds plagiarism between 2 taken files//
+		
 		for (int i=0;i<f.freq.size();i++)
 		{
 			for(int j=0;j<f.freq.size();j++)
@@ -19,10 +23,10 @@ public class Plag_1 {
 				
 			}
 		}
-		//fingerprinting.plagiarism(f.arraylist2.get(0),f.arraylist2.get(1));
+		
 		
 	
-		
+		/*Out put in format of matrix*/
 		Printmatrix p=new Printmatrix();
 		System.out.printf("\n%50s\n\n", "Plagiarism by Bag Of Words");
 		p.print_matrix(bag_plag);
@@ -32,9 +36,6 @@ public class Plag_1 {
 		p.print_matrix(fp_plag);
 
 
-		//System.out.println(bag_plag);
-		//System.out.println(lcs_plag);
-		
 		
 	}
 

@@ -3,6 +3,9 @@ package plag_project;
 import java.io.File;
 import java.util.ArrayList;
 
+/*This class takes a array list as input and  prints out plagiarism between list of files  
+ * in form of matrix*/
+
 public class Printmatrix {
 	
 	public void print_matrix(ArrayList<Float> a)

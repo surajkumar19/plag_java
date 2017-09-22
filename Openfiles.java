@@ -3,6 +3,10 @@ package plag_project;
 import java.io.*;
 import java.util.*;
 
+/*this class opens a file and reads it also stores the words in a hashmap and in a string of 
+ * only alphabetical values*/
+
+
 public class Openfiles {
 	ArrayList<HashMap<String, Integer> > freq=new  ArrayList<HashMap<String, Integer>>();
 	ArrayList<String> arraylist2=new  ArrayList<>();
@@ -13,8 +17,12 @@ public class Openfiles {
 		Scanner take= new Scanner(System.in);
 		String path= take.nextLine();
 		
-		File folder = new File(path);
+		File folder = new File(path);//storing the files from a folder from given path
 		listOfFiles = folder.listFiles(new FilenameFilter() { @Override public boolean accept(File dir, String name) { return name.endsWith(".txt"); } });
+		
+		/*this loop takes a reads a file and stores only the alphabetical characters in two ways
+		 * 1: creates a hashmap of words 
+		 * 2: stores all alphabets without any sepecial chars and spaces */
 		
 		for(File f:listOfFiles)
 		{
